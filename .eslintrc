@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "quotes": [2, "single"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "camelcase": "error",
+    "no-var": "error",
+    "eqeqeq": "error",
+    "space-before-function-paren": ["error", "always"],
+    "no-multiple-empty-lines": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "object-curly-spacing": ["error", "always"],
+    "sort-imports": "off",
+    "no-multi-spaces": "error",
+    "eol-last": ["error", "always"],
+    "key-spacing": ["error", { "beforeColon": false }],
+    "@typescript-eslint/semi": ["error"],
+    "@typescript-eslint/adjacent-overload-signatures": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-useless-catch": "off",
+    "@typescript-eslint/naming-convention": ["error", {
+      "selector": "interface",
+      "format": ["PascalCase"],
+      "custom": { "regex": "[A-Z]", "match": true }
+    }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "never", "prev": ["import", "cjs-import"], "next": ["import", "cjs-import"] }
+    ]
+  }
+}
